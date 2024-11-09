@@ -3,6 +3,7 @@ import React from "react";
 import { Libre_Bodoni } from "next/font/google";
 import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const playfair_Display = Playfair_Display({ subsets: ["latin"], weight: "400" });
 const libre_bodoni = Libre_Bodoni({ subsets: ["latin"], weight: "400" });
@@ -29,7 +30,7 @@ const Page = () => {
       </div>
 
       <div className="text-center mt-8">
-        <h1 className={`${libre_bodoni.className} text-2xl md:text-4xl font-normal text-black mb-4`}>
+        <h1 className={`${libre_bodoni.className} text-2xl md:text-4xl font-normal text-black mb-8`}>
           Shop By Categories
         </h1>
         <ul className={`${libre_bodoni.className} flex flex-wrap justify-center gap-4 md:gap-[103px] text-lg md:text-2xl`}>
@@ -41,7 +42,7 @@ const Page = () => {
       </div>
 
       <div className="h-auto md:h-screen w-full flex justify-center p-4 md:p-0">
-        <main className="w-full md:w-[60vw] grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+        <main className="w-full md:w-[60vw] grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 mt-8">
           {/* Adjust image dimensions for responsiveness */}
           <div className="col-span-2 md:col-span-2">
             <Image src="/images/earring_img.png" alt="ear_ring" width={893} height={582} className="w-full" />
@@ -96,7 +97,9 @@ const Page = () => {
           </p>
         </div>
       </div>
+      <Footer/>
     </div>
+   
   );
 };
 
